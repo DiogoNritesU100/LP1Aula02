@@ -5,7 +5,6 @@
         // Declare variables;
         string heightStr, radiusStr;
         float height, radius;
-        float pi = 3.1415926f;
         float vol, supArea;
 
         // Ask the user for height;
@@ -23,10 +22,10 @@
         radius = Convert.ToSingle(radiusStr);
 
         // Calculate volume;
-        vol = pi * radius * height;
+        vol = (float)Math.PI * (float)Math.Pow(radius, 2) * height;
 
         // Calculate superficial area;
-        supArea = 2 * pi * radius + height;
+        supArea = 2 * (float)Math.PI * radius + height;
 
         // Show volume;
         Console.WriteLine($"Volume is {vol:f3}");
@@ -34,6 +33,6 @@
         // Show superficial area;
         Console.WriteLine($"Superficial area is {supArea}");
 
-
+        
     }
 }
